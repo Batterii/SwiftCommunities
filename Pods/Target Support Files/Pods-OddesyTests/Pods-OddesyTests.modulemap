@@ -1,0 +1,6 @@
+framework module Pods_OddesyTests {
+  umbrella header "Pods-OddesyTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
