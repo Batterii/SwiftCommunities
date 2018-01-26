@@ -15,7 +15,7 @@ public struct Base {
 }
 
 protocol BatteriiApi {
-    func fetchIndex(name: String, complete: @escaping ( _ success: Bool, _ response: IndexResponse?, _ error: NSError? )->())
+    func fetchIndex(name: String, complete: @escaping ( _ success: Bool, _ error: NSError? )->())
 }
 
 class Api : BatteriiApi{
@@ -26,7 +26,7 @@ class Api : BatteriiApi{
         self.decoder = JSONDecoder()
     }
 
-    func fetchIndex(name: String, complete: @escaping (Bool, IndexResponse?, NSError?) -> ()) {
+    func fetchIndex(name: String, complete: @escaping (Bool, NSError?) -> ()) {
         
         let trimmedName = name.trimmingCharacters(in: .whitespaces)
         
@@ -42,9 +42,9 @@ class Api : BatteriiApi{
                 try! realm.write {
                     realm.add(indexResponse.community, update: true)
                 }
-                complete(true, indexResponse, nil)
+                complete(true, nil)
             }catch let error{
-                complete(false, nil, error as NSError)
+                complete(false, error as NSError)
             }
         }
     }

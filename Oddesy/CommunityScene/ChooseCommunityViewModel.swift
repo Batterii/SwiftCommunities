@@ -19,7 +19,7 @@ class ChooseCommunityViewModel{
     
     let realm : Realm
     
-    var communitiesNotificationToken : NotificationToken? = nil
+    var notificationToken: NotificationToken? = nil
     
     // whenever isLoading changes, this method is called
     var isLoading : Bool = false{
@@ -54,7 +54,7 @@ class ChooseCommunityViewModel{
         self.communities = realm.objects(Community.self).sorted(byKeyPath: "name")//order each community by its name
         
         // add change listener for community records
-        self.communitiesNotificationToken = communities.observe { [weak self] (changes: RealmCollectionChange) in
+        self.notificationToken = communities.observe { [weak self] (changes: RealmCollectionChange) in
             switch changes{
                 case .initial:
                     self?.communitiesListener.initial()
@@ -74,7 +74,7 @@ class ChooseCommunityViewModel{
     func fetchIndex(communityName: String){
         self.isLoading = true
     
-        api.fetchIndex(name: communityName) { [weak self] (success, response, error) in
+        api.fetchIndex(name: communityName) { [weak self] (success, error) in
             self?.isLoading = false
             
             if(error != nil){

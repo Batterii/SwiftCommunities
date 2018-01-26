@@ -43,26 +43,10 @@ class ViewController: MVVMViewController {
 
 }
 
-//TODO: Push this into a base class
 extension ViewController : RealmCollectionListener{
-    
-    // first load of data (from local storage) reload tableview
-    func initial(){
-        tableView.reloadData()
+    var tableview: UITableView {
+        return self.tableView
     }
-    
-    // update tableview according w/ animations
-    func dispatachTableViewUpdates(deletions: [Int], insertions: [Int], modifications: [Int]) {
-        tableView.beginUpdates()
-        tableView.insertRows(at: insertions.map({ IndexPath(row: $0, section: 0) }),
-                             with: .automatic)
-        tableView.deleteRows(at: deletions.map({ IndexPath(row: $0, section: 0)}),
-                             with: .automatic)
-        tableView.reloadRows(at: modifications.map({ IndexPath(row: $0, section: 0) }),
-                             with: .automatic)
-        tableView.endUpdates()
-    }
-    
 }
 
 extension ViewController : UISearchBarDelegate{

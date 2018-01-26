@@ -10,6 +10,8 @@
 		1D0EDAF0A75F0AFDDE655ECD /* Pods_OddesyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59CAB35868C2BB8311736324 /* Pods_OddesyUITests.framework */; };
 		1E0CDE056A18F858EA346CCA /* Pods_OddesyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D5C49E4B5220451E59A2A1 /* Pods_OddesyTests.framework */; };
 		38DC9C67151AAB668CDD2B70 /* Pods_Oddesy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EB392D085C259C2939208BA /* Pods_Oddesy.framework */; };
+		54E555FD7BDC6EB8DF3F9010 /* MockApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E55A5C173652F9A727CD22 /* MockApiService.swift */; };
+		54E5582D3641690C3CA097BF /* MockApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E55A5C173652F9A727CD22 /* MockApiService.swift */; };
 		934B043B2011279700E7C3F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B043A2011279700E7C3F0 /* AppDelegate.swift */; };
 		934B043D2011279700E7C3F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B043C2011279700E7C3F0 /* ViewController.swift */; };
 		934B04402011279700E7C3F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 934B043E2011279700E7C3F0 /* Main.storyboard */; };
@@ -48,6 +50,7 @@
 		0EB392D085C259C2939208BA /* Pods_Oddesy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Oddesy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F81015A1163081004B7B383 /* Pods-OddesyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OddesyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OddesyTests/Pods-OddesyTests.release.xcconfig"; sourceTree = "<group>"; };
 		381C7F7BC588CA18374A7C03 /* Pods-OddesyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OddesyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OddesyTests/Pods-OddesyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		54E55A5C173652F9A727CD22 /* MockApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockApiService.swift; sourceTree = "<group>"; };
 		59CAB35868C2BB8311736324 /* Pods_OddesyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OddesyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D5C49E4B5220451E59A2A1 /* Pods_OddesyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OddesyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		934B04372011279700E7C3F0 /* Oddesy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oddesy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +151,7 @@
 			children = (
 				934B044F2011279700E7C3F0 /* OddesyTests.swift */,
 				934B04512011279700E7C3F0 /* Info.plist */,
+				54E55A5C173652F9A727CD22 /* MockApiService.swift */,
 			);
 			path = OddesyTests;
 			sourceTree = "<group>";
@@ -530,6 +534,7 @@
 				93632D9B201A6438006E6DD6 /* RealmUtils.swift in Sources */,
 				934B04692011322D00E7C3F0 /* Base.swift in Sources */,
 				934B04772012837500E7C3F0 /* IndexResponse.swift in Sources */,
+				54E5582D3641690C3CA097BF /* MockApiService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,6 +543,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				934B04502011279700E7C3F0 /* OddesyTests.swift in Sources */,
+				54E555FD7BDC6EB8DF3F9010 /* MockApiService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
